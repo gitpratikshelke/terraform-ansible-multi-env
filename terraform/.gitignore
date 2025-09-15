@@ -1,0 +1,26 @@
+# --- Terraform ---
+# Local state files
+*.tfstate
+*.tfstate.*
+crash.log
+
+# Terraform working directory
+.terraform/
+.terraform.lock.hcl
+
+# Sensitive variable definitions
+*.tfvars
+
+# --- SSH Keys / Private keys ---
+terra-key
+*.pem
+*.key
+*.pub   # (optional, if you don’t want to push public keys either)
+
+# --- VS Code ---
+.vscode/
+*.code-workspace
+
+# --- OS generated ---
+.DS_Store
+Thumbs.db
