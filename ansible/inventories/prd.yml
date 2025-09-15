@@ -1,0 +1,20 @@
+all:
+  hosts:
+    server1:
+      ansible_host: 34.240.208.3
+      ansible_user: ubuntu
+      ansible_ssh_private_key_file: ~/.ssh/terra-key
+    server2:
+      ansible_host: 34.244.187.139
+      ansible_user: ubuntu
+      ansible_ssh_private_key_file: ~/.ssh/terra-key
+    server3:
+      ansible_host: 54.246.8.199 
+      ansible_user: ubuntu
+      ansible_ssh_private_key_file: ~/.ssh/terra-key
+  children:
+    servers:
+      hosts:
+        server1:
+        server2:
+        server3:

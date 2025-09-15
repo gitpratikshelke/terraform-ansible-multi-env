@@ -1,0 +1,15 @@
+all:
+  hosts:
+    server1:
+      ansible_host: 34.245.204.148   # yaha apna EC2 ka public IP daal
+      ansible_user: ubuntu
+      ansible_ssh_private_key_file: ~/.ssh/terra-key
+    server2:
+      ansible_host: 34.246.135.234   # yaha dusra EC2 ka public IP daal
+      ansible_user: ubuntu
+      ansible_ssh_private_key_file: ~/.ssh/terra-key
+  children:
+    servers:
+      hosts:
+        server1:
+        server2:
